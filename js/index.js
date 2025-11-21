@@ -157,25 +157,82 @@
 // }
 // console.log(lookUpProfile("Kristian", "lastName"));
 
-function pyramid(pattern, rows, isUpsideDown) {
-    let result = "";
+// ГЕНЕРАТОР ПИРАМИД
 
-    if (isUpsideDown) {
-        // Пирамида вершиной вниз
-        for (let i = rows; i > 0; i--) {
-            const spaces = " ".repeat(rows - i);
-            const patterns = pattern.repeat(2 * i - 1);
-            result += spaces + patterns + "\n";
-        }
-    } else {
-        // Пирамида вершиной вверх
-        for (let i = 1; i <= rows; i++) {
-            const spaces = " ".repeat(rows - i);
-            const patterns = pattern.repeat(2 * i - 1);
-            result += spaces + patterns + "\n";
-        }
-    }
+// function pyramid(pattern, rows, isUpsideDown) {
+//   let result = "\n";
 
-    return result;
-}
-console.log(pyramid("*", 4, true));
+//   if (isUpsideDown) {
+//     // Пирамида вершиной вниз
+//     for (let i = rows; i > 0; i--) {
+//       const spaces = " ".repeat(rows - i);
+//       const patterns = pattern.repeat(2 * i - 1);
+//       result += spaces + patterns + "\n";
+//     }
+//   } else {
+//     // Пирамида вершиной вверх
+//     for (let i = 1; i <= rows; i++) {
+//       const spaces = " ".repeat(rows - i);
+//       const patterns = pattern.repeat(2 * i - 1);
+//       result += spaces + patterns + "\n";
+//     }
+//   }
+
+//   return result;
+// }
+// console.log(pyramid("*", 4, true));
+
+// function getAverage(arrTest) {
+//   let sum = 0;
+//   for (let i = 0; i < arrTest.length; i++) {
+//     sum += arrTest[i];
+//   }
+//   return sum / arrTest.length;
+// }
+
+// function getGrade(ball) {
+//   if (ball === 100) {
+//     return "A+";
+//   } else if (ball >= 90) {
+//     return "A";
+//   } else if (ball >= 80) {
+//     return "B";
+//   } else if (ball >= 70) {
+//     return "C";
+//   } else if (ball >= 60) {
+//     return "D";
+//   } else {
+//     return "F";
+//   }
+// }
+
+// function hasPassingGrade(score) {
+//   return getGrade(score) !== "F";
+// }
+
+// function studentMsg(scores, studentScore) {
+//   const average = getAverage(scores);
+//   const grade = getGrade(studentScore);
+//   const passed = hasPassingGrade(studentScore);
+
+//   let message = `Class average: ${average}. Your grade: ${grade}. `;
+
+//   if (passed) {
+//     message += "You passed the course.";
+//   } else {
+//     message += "You failed the course.";
+//   }
+
+//   return message;
+// }
+// console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+
+// function titleCase(str) {
+//   let arr = str.split(" ");
+//   let result = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     result += arr[i].slice(0, 1).toUpperCase() + arr[i].slice(1) + " ";
+//   }
+//   return result;
+// }
+// console.log(titleCase("Hello world"));
