@@ -252,19 +252,40 @@
 let inventory = [
   {
     name: "serija",
-    quontity: 52,
+    quantity: 52,
   },
   {
     name: "yasya",
-    quontity: 52,
+    quantity: 52,
   },
 ];
-function findProductIndex(name) {
+function findProductIndex(productName) {
+  const searchName = productName.toLowerCase();
+
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].name === name) {
+    if (inventory[i].name.toLowerCase() === searchName) {
       return i;
     }
   }
   return -1;
 }
 console.log(findProductIndex("fedya"));
+
+function addProduct(product) {
+  let productFound = false;
+
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].name === product.name) {
+      inventory[i].quantity += product.quantity;
+      console.log(`${product.name} quantity updated`);
+      productFound = true;
+      break;
+    }
+  }
+
+  if (!productFound) {
+    inventory.push(product);
+    console.log(`${product.name} added to inventory`);
+  }
+}
+addProduct({ name: "FLOUR", quantity: 5 });
