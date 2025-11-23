@@ -236,3 +236,35 @@
 //   return result;
 // }
 // console.log(titleCase("Hello world"));
+
+// function bouncer(arr) {
+//   let result = [];
+
+//   for (let i of arr) {
+//     if (i) {
+//       result.push(i);
+//     }
+//   }
+//   return result;
+// }
+// console.log(bouncer([]));
+
+let inventory = [
+  {
+    name: "serija",
+    quontity: 52,
+  },
+  {
+    name: "yasya",
+    quontity: 52,
+  },
+];
+function findProductIndex(name) {
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].name === name) {
+      return i;
+    }
+  }
+  return -1;
+}
+console.log(findProductIndex("fedya"));
