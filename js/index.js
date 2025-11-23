@@ -289,3 +289,33 @@ function addProduct(product) {
   }
 }
 addProduct({ name: "FLOUR", quantity: 5 });
+
+function removeProduct(productName, quantity) {
+  productName = productName.toLowerCase;
+  const index = findProductIndex(productName);
+
+  if (index === -1) {
+    // Продукт не найден
+    console.log(`${productName} not found`);
+    return;
+  }
+
+  const product = inventory[index];
+
+  if (product.quantity < quantity) {
+    // Недостаточно товара
+    console.log(
+      `Not enough ${product.name} available, remaining pieces: ${product.quantity}`
+    );
+    return;
+  }
+
+  // Вычитаем количество
+  product.quantity -= quantity;
+  console.log(`Remaining ${product.name} pieces: ${product.quantity}`);
+
+  // Если количество стало 0, удаляем продукт
+  if (product.quantity === 0) {
+    inventory.splice(index, 1);
+  }
+}
