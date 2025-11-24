@@ -337,40 +337,62 @@
 // import { generatePassword } from "./generatePassword.js";
 // console.log(generatePassword(8));
 // =======================================
-function sumAll(arr) {
-  if (arr.length !== 2) {
-    console.log("Уёбищный массив");
-    return;
-  }
+// function sumAll(arr) {
+//   if (arr.length !== 2) {
+//     console.log("Уёбищный массив");
+//     return;
+//   }
 
-  let sum = 0;
-  let start = arr[0];
-  let end = arr[arr.length - 1];
-  if (start > end) {
-    start = arr[arr.length - 1];
-    end = arr[0];
-  }
-  for (let i = start; i <= end; i++) {
-    sum += i;
-  }
-  return `Общая сумма элементов: ${sum}`;
-}
-console.log(sumAll([10, 3]));
+//   let sum = 0;
+//   let start = arr[0];
+//   let end = arr[arr.length - 1];
+//   if (start > end) {
+//     start = arr[arr.length - 1];
+//     end = arr[0];
+//   }
+//   for (let i = start; i <= end; i++) {
+//     sum += i;
+//   }
+//   return `Общая сумма элементов: ${sum}`;
+// }
+// console.log(sumAll([10, 3]));
 
-function pairElement(str) {
-  let result = [];
-  const pairs = {
-    A: "T",
-    T: "A",
-    C: "G",
-    G: "C",
+// function pairElement(str) {
+//   let result = [];
+//   const pairs = {
+//     A: "T",
+//     T: "A",
+//     C: "G",
+//     G: "C",
+//   };
+//   for (let i = 0; i < str.length; i++) {
+//     const base = str[i];
+//     const pair = pairs[base];
+
+//     result.push([base, pair]);
+//   }
+//   return result;
+// }
+// console.log(pairElement("ATCGA"));
+
+function convertHTML(str) {
+  let newStr = "";
+  const sample = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&apos;",
   };
   for (let i = 0; i < str.length; i++) {
-    const base = str[i];
-    const pair = pairs[base];
-
-    result.push([base, pair]);
+    const char = str[i];
+    if (sample[char]) {
+      newStr += sample[char];
+    } else {
+      newStr += char;
+    }
   }
-  return result;
+  return newStr;
 }
-console.log(pairElement("ATCGA"));
+console.log(convertHTML("Schindler's List"));
+// material palenight theme
