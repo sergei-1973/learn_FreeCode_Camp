@@ -336,3 +336,23 @@
 
 // import { generatePassword } from "./generatePassword.js";
 // console.log(generatePassword(8));
+// =======================================
+function sumAll(arr) {
+  if (arr.length !== 2) {
+    console.log("Уёбищный массив");
+    return;
+  }
+
+  let sum = 0;
+  let start = arr[0];
+  let end = arr[arr.length - 1];
+  if (start > end) {
+    start = arr[arr.length - 1];
+    end = arr[0];
+  }
+  for (let i = start; i <= end; i++) {
+    sum += i;
+  }
+  return `Общая сумма элементов: ${sum}`;
+}
+console.log(sumAll([10, 3]));
