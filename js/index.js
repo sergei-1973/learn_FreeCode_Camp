@@ -356,3 +356,21 @@ function sumAll(arr) {
   return `Общая сумма элементов: ${sum}`;
 }
 console.log(sumAll([10, 3]));
+
+function pairElement(str) {
+  let result = [];
+  const pairs = {
+    A: "T",
+    T: "A",
+    C: "G",
+    G: "C",
+  };
+  for (let i = 0; i < str.length; i++) {
+    const base = str[i];
+    const pair = pairs[base];
+
+    result.push([base, pair]);
+  }
+  return result;
+}
+console.log(pairElement("ATCGA"));
