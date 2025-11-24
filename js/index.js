@@ -249,73 +249,90 @@
 // }
 // console.log(bouncer([]));
 
-let inventory = [
-  {
-    name: "serija",
-    quantity: 52,
-  },
-  {
-    name: "yasya",
-    quantity: 52,
-  },
-];
-function findProductIndex(productName) {
-  const searchName = productName.toLowerCase();
+// let inventory = [
+//   {
+//     name: "serija",
+//     quantity: 52,
+//   },
+//   {
+//     name: "yasya",
+//     quantity: 52,
+//   },
+// ];
+// function findProductIndex(productName) {
+//   const searchName = productName.toLowerCase();
 
-  for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].name.toLowerCase() === searchName) {
-      return i;
-    }
-  }
-  return -1;
-}
-console.log(findProductIndex("fedya"));
+//   for (let i = 0; i < inventory.length; i++) {
+//     if (inventory[i].name.toLowerCase() === searchName) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+// console.log(findProductIndex("fedya"));
 
-function addProduct(product) {
-  let productFound = false;
+// function addProduct(product) {
+//   let productFound = false;
 
-  for (let i = 0; i < inventory.length; i++) {
-    if (inventory[i].name === product.name) {
-      inventory[i].quantity += product.quantity;
-      console.log(`${product.name} quantity updated`);
-      productFound = true;
-      break;
-    }
-  }
+//   for (let i = 0; i < inventory.length; i++) {
+//     if (inventory[i].name === product.name) {
+//       inventory[i].quantity += product.quantity;
+//       console.log(`${product.name} quantity updated`);
+//       productFound = true;
+//       break;
+//     }
+//   }
 
-  if (!productFound) {
-    inventory.push(product);
-    console.log(`${product.name} added to inventory`);
-  }
-}
-addProduct({ name: "FLOUR", quantity: 5 });
+//   if (!productFound) {
+//     inventory.push(product);
+//     console.log(`${product.name} added to inventory`);
+//   }
+// }
+// addProduct({ name: "FLOUR", quantity: 5 });
 
-function removeProduct(productName, quantity) {
-  productName = productName.toLowerCase;
-  const index = findProductIndex(productName);
+// function removeProduct(productName, quantity) {
+//   productName = productName.toLowerCase;
+//   const index = findProductIndex(productName);
 
-  if (index === -1) {
-    // Продукт не найден
-    console.log(`${productName} not found`);
-    return;
-  }
+//   if (index === -1) {
+//     // Продукт не найден
+//     console.log(`${productName} not found`);
+//     return;
+//   }
 
-  const product = inventory[index];
+//   const product = inventory[index];
 
-  if (product.quantity < quantity) {
-    // Недостаточно товара
-    console.log(
-      `Not enough ${product.name} available, remaining pieces: ${product.quantity}`
-    );
-    return;
-  }
+//   if (product.quantity < quantity) {
+//     // Недостаточно товара
+//     console.log(
+//       `Not enough ${product.name} available, remaining pieces: ${product.quantity}`
+//     );
+//     return;
+//   }
 
-  // Вычитаем количество
-  product.quantity -= quantity;
-  console.log(`Remaining ${product.name} pieces: ${product.quantity}`);
+//   // Вычитаем количество
+//   product.quantity -= quantity;
+//   console.log(`Remaining ${product.name} pieces: ${product.quantity}`);
 
-  // Если количество стало 0, удаляем продукт
-  if (product.quantity === 0) {
-    inventory.splice(index, 1);
-  }
-}
+//   // Если количество стало 0, удаляем продукт
+//   if (product.quantity === 0) {
+//     inventory.splice(index, 1);
+//   }
+// }
+
+// function uniteUnique(...arrs) {
+//   let result = [];
+
+//   for (let arr of arrs) {
+//     for (let item of arr) {
+//       if (!result.includes(item)) {
+//         result.push(item);
+//       }
+//     }
+//   }
+//   return result;
+// }
+// console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
+
+// import { generatePassword } from "./generatePassword.js";
+// console.log(generatePassword(8));
