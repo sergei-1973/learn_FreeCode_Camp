@@ -375,24 +375,86 @@
 // }
 // console.log(pairElement("ATCGA"));
 
-function convertHTML(str) {
-  let newStr = "";
-  const sample = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&apos;",
-  };
-  for (let i = 0; i < str.length; i++) {
-    const char = str[i];
-    if (sample[char]) {
-      newStr += sample[char];
-    } else {
-      newStr += char;
+// function convertHTML(str) {
+//   let newStr = "";
+//   const sample = {
+//     "&": "&amp;",
+//     "<": "&lt;",
+//     ">": "&gt;",
+//     '"': "&quot;",
+//     "'": "&apos;",
+//   };
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i];
+//     if (sample[char]) {
+//       newStr += sample[char];
+//     } else {
+//       newStr += char;
+//     }
+//   }
+//   return newStr;
+// }
+// console.log(convertHTML("Schindler's List"));
+// // material palenight theme
+
+// function sumFibs(num) {
+//   if (num < 1) return 0;
+
+//   let prev = 0;
+//   let curr = 1;
+//   let sum = 0;
+
+//   while (curr <= num) {
+//     // Если текущее число нечетное, добавляем к сумме
+//     if (curr % 2 !== 0) {
+//       sum += curr;
+//     }
+
+//     // Переходим к следующему числу Фибоначчи
+//     let next = prev + curr;
+//     prev = curr;
+//     curr = next;
+//   }
+
+//   return sum;
+// }
+// console.log(sumFibs(1000));
+
+// function dropElements(arr, func) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (func(arr[i])) {
+//       return arr.splice(i);
+//     }
+//   }
+//   return [];
+// }
+// console.log(
+//   dropElements([1, 2, 3, 4], function (n) {
+//     return n > 5;
+//   })
+// );
+
+function addTogether(first, second) {
+  // Если передано два аргумента
+  if (arguments.length === 2) {
+    // Проверяем, оба ли числа
+    if (typeof first === "number" && typeof second === "number") {
+      return first + second;
     }
+    return undefined;
   }
-  return newStr;
+
+  // Если передан один аргумент и он число
+  if (arguments.length === 1 && typeof first === "number") {
+    return function (next) {
+      // Проверяем, является ли следующий аргумент числом
+      if (typeof next === "number") {
+        return first + next;
+      }
+      return undefined;
+    };
+  }
+
+  // Во всех остальных случаях
+  return undefined;
 }
-console.log(convertHTML("Schindler's List"));
-// material palenight theme
