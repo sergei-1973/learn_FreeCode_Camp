@@ -434,27 +434,29 @@
 //   })
 // );
 
-function addTogether(first, second) {
-  // Если передано два аргумента
-  if (arguments.length === 2) {
-    // Проверяем, оба ли числа
-    if (typeof first === "number" && typeof second === "number") {
-      return first + second;
-    }
-    return undefined;
-  }
+// function addTogether(first, second) {
+//   // Если передано два аргумента
+//   if (arguments.length === 2) {
+//     // Проверяем, оба ли числа
+//     if (typeof first === "number" && typeof second === "number") {
+//       return first + second;
+//     }
+//     return undefined;
+//   }
 
-  // Если передан один аргумент и он число
-  if (arguments.length === 1 && typeof first === "number") {
-    return function (next) {
-      // Проверяем, является ли следующий аргумент числом
-      if (typeof next === "number") {
-        return first + next;
-      }
-      return undefined;
-    };
-  }
+//   // Если передан один аргумент и он число
+//   if (arguments.length === 1 && typeof first === "number") {
+//     return function (next) {
+//       // Проверяем, является ли следующий аргумент числом
+//       if (typeof next === "number") {
+//         return first + next;
+//       }
+//       return undefined;
+//     };
+//   }
 
-  // Во всех остальных случаях
-  return undefined;
-}
+//   // Во всех остальных случаях
+//   return undefined;
+// }
+// ======================================================================
+import * as Hof from "./higher_order_functions.js";
