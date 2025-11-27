@@ -1,5 +1,6 @@
 "use strict";
 
+
 // const user = {
 //     name: "Serija",
 //     age: 52,
@@ -459,4 +460,27 @@
 //   return undefined;
 // }
 // ======================================================================
-import * as Hof from "./higher_order_functions.js";
+// import * as Hof from "./higher_order_functions.js";
+// import { books } from "./books.js";
+
+// function sortByYear(book1, book2) {
+//   if (book1.releaseYear < book2.releaseYear) {
+//     return -1
+//   } else if (book1.releaseYear > book2.releaseYear) {
+//     return 1
+//   } else {
+//     return 0
+//   }
+
+// }
+// const filteredBooks = books.filter((book) => book.releaseYear > 1950)
+// filteredBooks.sort(sortByYear)
+// console.log(filteredBooks);
+
+// function getIndexToIns(arr, num) {
+//   arr.push(num)
+//   arr.sort((a, b) => a - b)
+  
+//   return arr.findIndex(index => index === num)
+// }
+// console.log(getIndexToIns([20, 3, 5], 19));
