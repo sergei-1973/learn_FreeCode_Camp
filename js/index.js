@@ -1,6 +1,5 @@
 "use strict";
 
-
 // const user = {
 //     name: "Serija",
 //     age: 52,
@@ -480,7 +479,26 @@
 // function getIndexToIns(arr, num) {
 //   arr.push(num)
 //   arr.sort((a, b) => a - b)
-  
+
 //   return arr.findIndex(index => index === num)
 // }
 // console.log(getIndexToIns([20, 3, 5], 19));
+
+// function diffArray(arr1, arr2) {
+//   if (!arr1.length && !arr2.length) {
+//     return [];
+//   }
+//   if (!arr1.length) return arr2;
+
+//   if (!arr2.length) return arr1;
+
+//   let result = arr1
+//     .filter((element) => !arr2.includes(element))
+//     .concat(arr2.filter((element) => !arr1.includes(element)));
+
+//   return result;
+// }
+// console.log(diffArray([], []));
+// =====================================================================
+// import { destroyer } from "./destroyer.js";
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
