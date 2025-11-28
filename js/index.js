@@ -502,3 +502,58 @@
 // =====================================================================
 // import { destroyer } from "./destroyer.js";
 // console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+
+// function whatIsInAName(arr, originObj) {
+//     let sourseKeys = Object.keys(originObj)
+
+//     return arr.filter((obj) => {
+//         return sourseKeys.every(key => {
+//             return obj.hasOwnProperty(key) && obj[key] === originObj[key]
+//         })
+//     })
+// }
+// console.log(whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }));
+
+// function sumPrimes(num) {
+//     if (num < 2) return 0
+//     if (num === 2) return num
+//     let result = []
+//     nextPrime:
+//     for (let i = 2; i <= num; i++) {
+//         for (let j = 2; j < i; j++) {
+//             if (i % j == 0) continue nextPrime
+//         }
+//         result.push(i)
+//     }
+//     return result.reduce((a, b) => a + b)
+// }
+
+
+// console.log(sumPrimes(10));
+
+// function smallestCommons(arr) {
+//     const [min, max] = arr.sort((a, b) => a - b);
+
+//     // Используем формулу: НОК(a,b) = |a*b| / НОД(a,b)
+//     // Для диапазона: НОК(a,b,c) = НОК(НОК(a,b), c)
+
+//     let lcm = min;
+//     for (let i = min + 1; i <= max; i++) {
+//         let gcd = findGCD(lcm, i);
+//         lcm = (lcm * i) / gcd;
+//     }
+
+//     return lcm;
+// }
+
+// function findGCD(a, b) {
+//     return b === 0 ? a : findGCD(b, a % b);
+// }
+
+// import { steamrollArray } from "./recursion.js";
+// console.log(steamrollArray([[["a"]], [["b"]]]));
+
+// function truthCheck(collection, pre) {
+//     return collection.every((item) => item[pre])
+// }
+// console.log(truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "id"));
