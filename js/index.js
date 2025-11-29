@@ -558,6 +558,6 @@
 // }
 // console.log(truthCheck([{ id: 1, data: { url: "https://freecodecamp.org", name: "freeCodeCamp" } }, { id: 2, data: { url: "https://coderadio.freecodecamp.org/", name: "CodeRadio" } }, { id: null, data: {} }], "id"));
 
-const words = ['apple', 'banana', 'pear', 'kiwi'];
-const shortWords = words.filter(word => word.length <= 5);
-console.log(shortWords);
+// const words = ['apple', 'banana', 'pear', 'kiwi'];
+// const shortWords = words.filter(word => word.length <= 5);
+// console.log(shortWords);
