@@ -4,6 +4,15 @@
 // img.src = "https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg";
 // img.alt = "A slice of lasagna on a plate.";
 // container.appendChild(img);
-// console.log(container);
-const desertList = document.getElementById("desserts");
-console.log(desertList);
+
+const passwordP = document.querySelector(".password");
+const passwordText = document.querySelector(".passwordText");
+import { generatePassword } from "./generatePassword.js";
+const setPassord = setInterval(() => {
+  passwordP.textContent = generatePassword(6);
+  passwordText.value += passwordP;
+}, 1000);
+
+setTimeout(() => {
+  clearInterval(setPassord);
+}, 5000);
