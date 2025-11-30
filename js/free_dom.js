@@ -7,12 +7,25 @@
 
 const passwordP = document.querySelector(".password");
 const passwordText = document.querySelector(".passwordText");
-import { generatePassword } from "./generatePassword.js";
-const setPassord = setInterval(() => {
-  passwordP.textContent = generatePassword(6);
-  passwordText.value += passwordP;
-}, 1000);
+const passwordBtn = document.querySelector(".passwordBtn");
+const clearPassword = document.querySelector(".clearPassword");
 
-setTimeout(() => {
-  clearInterval(setPassord);
-}, 5000);
+import { generatePassword } from "./generatePassword.js";
+
+passwordBtn.addEventListener("click", function () {
+  let count = 0;
+  const setPassord = setInterval(() => {
+    count++;
+    passwordP.textContent = generatePassword(8);
+
+    passwordText.textContent += ` ${count} - ${passwordP.textContent}; `;
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(setPassord);
+  }, 5000);
+});
+clearPassword.addEventListener("click", function () {
+  passwordText.textContent = "Сгенерированный пароль:";
+  passwordP.textContent = "PASSWORD";
+});
