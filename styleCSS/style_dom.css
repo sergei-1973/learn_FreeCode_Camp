@@ -1,5 +1,39 @@
-.password,
+/* .password,
 .passwordText {
   font-size: 36px;
   text-align: center;
+} */
+/* ДЛЯ АНИМАЦИИ */
+
+/* body {
+  overflow-x: hidden;
 }
+.rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 250px;
+  border-radius: 5px;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-size: 2rem;
+  position: absolute;
+} */
+ /* body {
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ }
+ .square {
+  background: #1b1b32;
+  width: 10rem;
+  aspect-ratio: 1/1;
+ }
+ button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+} */
