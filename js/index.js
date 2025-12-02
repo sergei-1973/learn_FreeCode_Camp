@@ -528,7 +528,6 @@
 //     return result.reduce((a, b) => a + b)
 // }
 
-
 // console.log(sumPrimes(10));
 
 // function smallestCommons(arr) {
@@ -561,3 +560,6 @@
 // const words = ['apple', 'banana', 'pear', 'kiwi'];
 // const shortWords = words.filter(word => word.length <= 5);
 // console.log(shortWords);
+// import { dialog } from "./dialog.js";
+// const dialog = document.getElementById("my-modal");
+// dialog.showModal();

@@ -44,7 +44,6 @@
 //   changeImg();
 // }
 
-
 // ========АНИМАЦИЯ===========================
 // const rect = document.getElementById('rect')
 // let position = 0
@@ -66,7 +65,6 @@
 // const square = document.querySelector('#square');
 // const playBtn = document.querySelector("#playBtn");
 // const pauseBtn = document.querySelector("#pauseBtn");
-
 
 // const animation = square.animate(
 //     [{ transform: "translateX(0px)" }, { transform: "translateX(200px)" }],
@@ -102,3 +100,4 @@
 // // ctx.fillRect(1, 1, 150, 100)
 // ctx.font = '30px Arial'
 // ctx.fillText('Hello HTML Canvas!', 1, 50)
+import { dialog, noModal } from "./dialog.js";
