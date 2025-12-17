@@ -563,3 +563,11 @@
 // import { dialog } from "./dialog.js";
 // const dialog = document.getElementById("my-modal");
 // dialog.showModal();
+const buttonMenu = document.getElementById('menuButton')
+const menuList = document.getElementById('menuList')
+
+buttonMenu.addEventListener('click', () => {
+    const expanded = buttonMenu.getAttribute('aria-expanded') === 'true';
+    buttonMenu.setAttribute('aria-expanded', String(!expanded));
+    menuList.hidden = expanded
+})
