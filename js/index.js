@@ -563,11 +563,29 @@
 // import { dialog } from "./dialog.js";
 // const dialog = document.getElementById("my-modal");
 // dialog.showModal();
-const buttonMenu = document.getElementById('menuButton')
-const menuList = document.getElementById('menuList')
+const buttonMenu = document.getElementById("menuButton");
+const menuList = document.getElementById("menuList");
 
-buttonMenu.addEventListener('click', () => {
-    const expanded = buttonMenu.getAttribute('aria-expanded') === 'true';
-    buttonMenu.setAttribute('aria-expanded', String(!expanded));
-    menuList.hidden = expanded
-})
+buttonMenu.addEventListener("click", () => {
+  const expanded = buttonMenu.getAttribute("aria-expanded") === "true";
+  buttonMenu.setAttribute("aria-expanded", String(!expanded));
+  menuList.hidden = expanded;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const warning = document.querySelector(".session-warning");
+
+  setTimeout(() => {
+    warning.classList.add("visible");
+  }, 100);
+
+  setTimeout(() => {
+    warning.classList.add("fade-out");
+  }, 8000);
+
+  warning.addEventListener("transitionend", () => {
+    if (warning.classList.contains("fade-out")) {
+      warning.remove();
+    }
+  });
+});
