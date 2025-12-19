@@ -100,4 +100,23 @@
 // // ctx.fillRect(1, 1, 150, 100)
 // ctx.font = '30px Arial'
 // ctx.fillText('Hello HTML Canvas!', 1, 50)
-import { dialog, noModal } from "./dialog.js";
+// import { dialog, noModal } from "./dialog.js";
+// const selectMenu = document.getElementById("select-menu");
+
+// selectMenu.addEventListener("change", (e) => {
+//   console.log(`You selected: ${e.target.value}`);
+// });
+// const inputText = document.getElementById("input-text");
+// const getInputText = document.getElementById("getinputText");
+// inputText.addEventListener("input", (e) => {
+//   getInputText.textContent = e.target.value;
+// });
+const p = document.querySelector("p");
+const span = document.querySelector("span");
+
+p.addEventListener("click", (e) => {
+  e.target.style.color = "yellow";
+});
+// span.addEventListener("click", (e) => {
+//   e.target.style.color = "red";
+// });
